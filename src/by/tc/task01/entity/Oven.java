@@ -2,12 +2,12 @@ package by.tc.task01.entity;
 
 public class Oven extends Appliance{
 
-    final int POWER_CONSUMPTION;
-    final int WEIGHT;
-    final int CAPACITY;
-    final int DEPTH;
-    final double HEIGHT;
-    final double WIDTH;
+    private int POWER_CONSUMPTION;
+    private int WEIGHT;
+    private int CAPACITY;
+    private int DEPTH;
+    private double HEIGHT;
+    private double WIDTH;
 
     public Oven(int POWER_CONSUMPTION, int WEIGHT, int CAPACITY, int DEPTH, double HEIGHT, double WIDTH) {
         this.POWER_CONSUMPTION = POWER_CONSUMPTION;

@@ -15,6 +15,7 @@ import java.util.Set;
 public class Run {
     public static void main(String[] args) throws DAOException {
 
+/*
         Criteria criteria = new Criteria(Oven.class.getSimpleName());//"Oven"
         //criteria.add("POWER_CONSUMPTION", 1500);
         //criteria.add("WEIGHT", 12);
@@ -93,8 +94,9 @@ public class Run {
         if (className.equalsIgnoreCase("VacuumCleaner")) {
             return new VacuumCleaner();
         }
-        return null;
+        return null;*/
     }
+
 
 
 }
