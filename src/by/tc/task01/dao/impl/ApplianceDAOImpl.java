@@ -21,7 +21,7 @@ public class ApplianceDAOImpl implements ApplianceDAO {
     @Override
     public Appliance find(Criteria criteria) throws DAOException {
 
-        final String path = "resources/appliances_db.txt";
+        public static final String path = "resources/appliances_db.txt";
         Appliance appliance = null;
         boolean founded;
         String applianceDelims = " : ";
