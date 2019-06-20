@@ -48,6 +48,14 @@ public class ApplianceDAOImpl implements ApplianceDAO {
                     params = tokens[1].split(paramsDelims);
                     founded = true;
                     for (String key : keys) {
+                        
+                        /* //  var.1 strings
+                        String search = key + "=" + criteria.getCriteria().get(key);
+                        if (!contains(Arrays.asList(params), search)) {
+                            founded = false;
+                        }
+                        }*/
+                        
                         //  var.2 regex
                         String search = (key + "=" + criteria.getCriteria().get(key)).toLowerCase();
                         Pattern searchRequest = Pattern.compile(search);
@@ -57,13 +65,6 @@ public class ApplianceDAOImpl implements ApplianceDAO {
                             break;
                         }
                     }
-/*
-                      //  var.1 strings
-                      String search = key + "=" + criteria.getCriteria().get(key);
-                        if (!contains(Arrays.asList(params), search)) {
-                            founded = false;
-                        }
-                    }*/
                     if (founded) {
                         appliance = createAppliance(className, params);
                     }
@@ -88,7 +89,7 @@ public class ApplianceDAOImpl implements ApplianceDAO {
         return flag;
     }
 
-    public Appliance createAppliance(String className, String[] params) {
+    private Appliance createAppliance(String className, String[] params) {
 
         if (className.equalsIgnoreCase(SearchCriteria.Laptop.class.getSimpleName())) {
             return new Laptop(Double.valueOf(params[0].split("=")[1]), //BATTERY_CAPACITY
