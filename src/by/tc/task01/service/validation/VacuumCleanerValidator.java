@@ -32,7 +32,7 @@ public class VacuumCleanerValidator {
                 case "FILTER_TYPE":
                     Pattern searchRequest = Pattern.compile("[^ABC]");
                     Matcher matcher = searchRequest.matcher(String.valueOf(params.get(key)));
-                    if (matcher.find()) {
+                    if (matcher.matches()) {
                         return false;
                     }
                     break;
