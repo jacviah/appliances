@@ -39,7 +39,7 @@ public class TabletPCValidator {
                 case "COLOR":
                     Pattern searchRequest = Pattern.compile("^[a-zA-Z]+$");
                     Matcher matcher = searchRequest.matcher(String.valueOf(params.get(key)));
-                    if (!matcher.find()) {
+                    if (!matcher.matches()) {
                         return false;
                     }
                     break;
