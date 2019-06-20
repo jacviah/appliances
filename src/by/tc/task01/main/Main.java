@@ -35,13 +35,22 @@ public class Main {
 		PrintApplianceInfo.print(appliance);
 
 		//////////////////////////////////////////////////////////////////
-		
+
 		Criteria criteriaTabletPC = new Criteria(TabletPC.class.getSimpleName());
 		criteriaTabletPC.add(TabletPC.COLOR.toString(), "BLUE");
 		criteriaTabletPC.add(TabletPC.DISPLAY_INCHES.toString(), 14);
 		criteriaTabletPC.add(TabletPC.MEMORY_ROM.toString(), 8000);
 
 		appliance = service.find(criteriaTabletPC);// find(Object...obj)
+
+		PrintApplianceInfo.print(appliance);
+
+		//////////////////////////////////////////////////////////////////
+
+		Criteria criteriaVacuumCleaner = new Criteria(VacuumCleaner.class.getSimpleName());
+		criteriaVacuumCleaner.add(VacuumCleaner.FILTER_TYPE.toString(), "C");
+
+		appliance = service.find(criteriaVacuumCleaner);// find(Object...obj)
 
 		PrintApplianceInfo.print(appliance);
 
