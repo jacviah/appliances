@@ -18,10 +18,11 @@ import java.util.regex.Pattern;
 
 public class ApplianceDAOImpl implements ApplianceDAO {
 
+    public static final String path = "resources/appliances_db.txt";
+
     @Override
     public Appliance find(Criteria criteria) throws DAOException {
 
-        public static final String path = "resources/appliances_db.txt";
         Appliance appliance = null;
         boolean founded;
         String applianceDelims = " : ";
