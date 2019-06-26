@@ -2,74 +2,74 @@ package by.tc.task01.entity;
 
 import java.util.Objects;
 
-public class Refrigerator extends Appliance {
+public class Refrigerator implements Appliance {
 
-    private int POWER_CONSUMPTION;
-    private int WEIGHT;
-    private int FREEZER_CAPACITY;
-    private double OVERALL_CAPACITY;
-    private double HEIGHT;
-    private double WIDTH;
+    private int powerConsumption;
+    private int weight;
+    private int freezerCapacity;
+    private double overallCapacity;
+    private double height;
+    private double width;
 
     public Refrigerator() {
 
     }
 
-    public Refrigerator(int POWER_CONSUMPTION, int WEIGHT, int FREEZER_CAPACITY, double OVERALL_CAPACITY, double HEIGHT, double WIDTH) {
-        this.POWER_CONSUMPTION = POWER_CONSUMPTION;
-        this.WEIGHT = WEIGHT;
-        this.FREEZER_CAPACITY = FREEZER_CAPACITY;
-        this.OVERALL_CAPACITY = OVERALL_CAPACITY;
-        this.HEIGHT = HEIGHT;
-        this.WIDTH = WIDTH;
+    public Refrigerator(int powerConsumption, int weight, int freezerCapacity, double overallCapacity, double height, double width) {
+        this.powerConsumption = powerConsumption;
+        this.weight = weight;
+        this.freezerCapacity = freezerCapacity;
+        this.overallCapacity = overallCapacity;
+        this.height = height;
+        this.width = width;
     }
 
-    public int getPOWER_CONSUMPTION() {
-        return POWER_CONSUMPTION;
+    public int getPowerConsumption() {
+        return powerConsumption;
     }
 
-    public void setPOWER_CONSUMPTION(int POWER_CONSUMPTION) {
-        this.POWER_CONSUMPTION = POWER_CONSUMPTION;
+    public void setPowerConsumption(int powerConsumption) {
+        this.powerConsumption = powerConsumption;
     }
 
-    public int getWEIGHT() {
-        return WEIGHT;
+    public int getWeight() {
+        return weight;
     }
 
-    public void setWEIGHT(int WEIGHT) {
-        this.WEIGHT = WEIGHT;
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
-    public int getFREEZER_CAPACITY() {
-        return FREEZER_CAPACITY;
+    public int getFreezerCapacity() {
+        return freezerCapacity;
     }
 
-    public void setFREEZER_CAPACITY(int FREEZER_CAPACITY) {
-        this.FREEZER_CAPACITY = FREEZER_CAPACITY;
+    public void setFreezerCapacity(int freezerCapacity) {
+        this.freezerCapacity = freezerCapacity;
     }
 
-    public double getOVERALL_CAPACITY() {
-        return OVERALL_CAPACITY;
+    public double getOverallCapacity() {
+        return overallCapacity;
     }
 
-    public void setOVERALL_CAPACITY(double OVERALL_CAPACITY) {
-        this.OVERALL_CAPACITY = OVERALL_CAPACITY;
+    public void setOverallCapacity(double overallCapacity) {
+        this.overallCapacity = overallCapacity;
     }
 
-    public double getHEIGHT() {
-        return HEIGHT;
+    public double getHeight() {
+        return height;
     }
 
-    public void setHEIGHT(double HEIGHT) {
-        this.HEIGHT = HEIGHT;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
-    public double getWIDTH() {
-        return WIDTH;
+    public double getWidth() {
+        return width;
     }
 
-    public void setWIDTH(double WIDTH) {
-        this.WIDTH = WIDTH;
+    public void setWidth(double width) {
+        this.width = width;
     }
 
     @Override
@@ -77,28 +77,28 @@ public class Refrigerator extends Appliance {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Refrigerator that = (Refrigerator) o;
-        return POWER_CONSUMPTION == that.POWER_CONSUMPTION &&
-                WEIGHT == that.WEIGHT &&
-                FREEZER_CAPACITY == that.FREEZER_CAPACITY &&
-                Double.compare(that.OVERALL_CAPACITY, OVERALL_CAPACITY) == 0 &&
-                Double.compare(that.HEIGHT, HEIGHT) == 0 &&
-                Double.compare(that.WIDTH, WIDTH) == 0;
+        return powerConsumption == that.powerConsumption &&
+                weight == that.weight &&
+                freezerCapacity == that.freezerCapacity &&
+                Double.compare(that.overallCapacity, overallCapacity) == 0 &&
+                Double.compare(that.height, height) == 0 &&
+                Double.compare(that.width, width) == 0;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(POWER_CONSUMPTION, WEIGHT, FREEZER_CAPACITY, OVERALL_CAPACITY, HEIGHT, WIDTH);
+        return Objects.hash(powerConsumption, weight, freezerCapacity, overallCapacity, height, width);
     }
 
     @Override
     public String toString() {
         return "Refrigerator{" +
-                "POWER_CONSUMPTION=" + POWER_CONSUMPTION +
-                ", WEIGHT=" + WEIGHT +
-                ", FREEZER_CAPACITY=" + FREEZER_CAPACITY +
-                ", OVERALL_CAPACITY=" + OVERALL_CAPACITY +
-                ", HEIGHT=" + HEIGHT +
-                ", WIDTH=" + WIDTH +
+                "powerConsumption=" + powerConsumption +
+                ", weight=" + weight +
+                ", freezerCapacity=" + freezerCapacity +
+                ", overallCapacity=" + overallCapacity +
+                ", height=" + height +
+                ", width=" + width +
                 '}';
     }
 }

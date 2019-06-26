@@ -2,53 +2,53 @@ package by.tc.task01.entity;
 
 import java.util.Objects;
 
-public class Speakers extends Appliance{
+public class Speakers implements Appliance{
 
-    private int POWER_CONSUMPTION;
-    private int NUMBER_OF_SPEAKERS;
-    private int CORD_LENGTH;
-    private String FREQUENCY_RANGE;
+    private int powerConsumption;
+    private int numberOfSpeakers;
+    private int cordLengthGTH;
+    private String frequencyRangeGE;
 
     public Speakers() {
     }
 
-    public Speakers(int POWER_CONSUMPTION, int NUMBER_OF_SPEAKERS, int CORD_LENGTH, String FREQUENCY_RANGE) {
-        this.POWER_CONSUMPTION = POWER_CONSUMPTION;
-        this.NUMBER_OF_SPEAKERS = NUMBER_OF_SPEAKERS;
-        this.CORD_LENGTH = CORD_LENGTH;
-        this.FREQUENCY_RANGE = FREQUENCY_RANGE;
+    public Speakers(int powerConsumption, int numberOfSpeakers, int cordLengthGTH, String frequencyRangeGE) {
+        this.powerConsumption = powerConsumption;
+        this.numberOfSpeakers = numberOfSpeakers;
+        this.cordLengthGTH = cordLengthGTH;
+        this.frequencyRangeGE = frequencyRangeGE;
     }
 
-    public int getPOWER_CONSUMPTION() {
-        return POWER_CONSUMPTION;
+    public int getPowerConsumption() {
+        return powerConsumption;
     }
 
-    public void setPOWER_CONSUMPTION(int POWER_CONSUMPTION) {
-        this.POWER_CONSUMPTION = POWER_CONSUMPTION;
+    public void setPowerConsumption(int powerConsumption) {
+        this.powerConsumption = powerConsumption;
     }
 
-    public int getNUMBER_OF_SPEAKERS() {
-        return NUMBER_OF_SPEAKERS;
+    public int getNumberOfSpeakers() {
+        return numberOfSpeakers;
     }
 
-    public void setNUMBER_OF_SPEAKERS(int NUMBER_OF_SPEAKERS) {
-        this.NUMBER_OF_SPEAKERS = NUMBER_OF_SPEAKERS;
+    public void setNumberOfSpeakers(int numberOfSpeakers) {
+        this.numberOfSpeakers = numberOfSpeakers;
     }
 
-    public int getCORD_LENGTH() {
-        return CORD_LENGTH;
+    public int getCordLengthGTH() {
+        return cordLengthGTH;
     }
 
-    public void setCORD_LENGTH(int CORD_LENGTH) {
-        this.CORD_LENGTH = CORD_LENGTH;
+    public void setCordLengthGTH(int cordLengthGTH) {
+        this.cordLengthGTH = cordLengthGTH;
     }
 
-    public String getFREQUENCY_RANGE() {
-        return FREQUENCY_RANGE;
+    public String getFrequencyRangeGE() {
+        return frequencyRangeGE;
     }
 
-    public void setFREQUENCY_RANGE(String FREQUENCY_RANGE) {
-        this.FREQUENCY_RANGE = FREQUENCY_RANGE;
+    public void setFrequencyRangeGE(String frequencyRangeGE) {
+        this.frequencyRangeGE = frequencyRangeGE;
     }
 
     @Override
@@ -56,24 +56,24 @@ public class Speakers extends Appliance{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Speakers speakers = (Speakers) o;
-        return POWER_CONSUMPTION == speakers.POWER_CONSUMPTION &&
-                NUMBER_OF_SPEAKERS == speakers.NUMBER_OF_SPEAKERS &&
-                CORD_LENGTH == speakers.CORD_LENGTH &&
-                Objects.equals(FREQUENCY_RANGE, speakers.FREQUENCY_RANGE);
+        return powerConsumption == speakers.powerConsumption &&
+                numberOfSpeakers == speakers.numberOfSpeakers &&
+                cordLengthGTH == speakers.cordLengthGTH &&
+                Objects.equals(frequencyRangeGE, speakers.frequencyRangeGE);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(POWER_CONSUMPTION, NUMBER_OF_SPEAKERS, CORD_LENGTH, FREQUENCY_RANGE);
+        return Objects.hash(powerConsumption, numberOfSpeakers, cordLengthGTH, frequencyRangeGE);
     }
 
     @Override
     public String toString() {
         return "Speakers{" +
-                "POWER_CONSUMPTION=" + POWER_CONSUMPTION +
-                ", NUMBER_OF_SPEAKERS=" + NUMBER_OF_SPEAKERS +
-                ", CORD_LENGTH=" + CORD_LENGTH +
-                ", FREQUENCY_RANGE='" + FREQUENCY_RANGE + '\'' +
+                "powerConsumption=" + powerConsumption +
+                ", numberOfSpeakers=" + numberOfSpeakers +
+                ", cordLengthGTH=" + cordLengthGTH +
+                ", frequencyRangeGE='" + frequencyRangeGE + '\'' +
                 '}';
     }
 }

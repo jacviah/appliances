@@ -2,74 +2,74 @@ package by.tc.task01.entity;
 
 import java.util.Objects;
 
-public class Oven extends Appliance{
+public class Oven implements Appliance{
 
-    private int POWER_CONSUMPTION;
-    private int WEIGHT;
-    private int CAPACITY;
-    private int DEPTH;
-    private double HEIGHT;
-    private double WIDTH;
+    private int powerConsumption;
+    private int weight;
+    private int capacity;
+    private int depth;
+    private double height;
+    private double width;
 
     public Oven() {
 
     }
 
-    public Oven(int POWER_CONSUMPTION, int WEIGHT, int CAPACITY, int DEPTH, double HEIGHT, double WIDTH) {
-        this.POWER_CONSUMPTION = POWER_CONSUMPTION;
-        this.WEIGHT = WEIGHT;
-        this.CAPACITY = CAPACITY;
-        this.DEPTH = DEPTH;
-        this.HEIGHT = HEIGHT;
-        this.WIDTH = WIDTH;
+    public Oven(int powerConsumption, int weight, int capacity, int depth, double height, double width) {
+        this.powerConsumption = powerConsumption;
+        this.weight = weight;
+        this.capacity = capacity;
+        this.depth = depth;
+        this.height = height;
+        this.width = width;
     }
 
-    public int getPOWER_CONSUMPTION() {
-        return POWER_CONSUMPTION;
+    public int getPowerConsumption() {
+        return powerConsumption;
     }
 
-    public void setPOWER_CONSUMPTION(int POWER_CONSUMPTION) {
-        this.POWER_CONSUMPTION = POWER_CONSUMPTION;
+    public void setPowerConsumption(int powerConsumption) {
+        this.powerConsumption = powerConsumption;
     }
 
-    public int getWEIGHT() {
-        return WEIGHT;
+    public int getWeight() {
+        return weight;
     }
 
-    public void setWEIGHT(int WEIGHT) {
-        this.WEIGHT = WEIGHT;
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
-    public int getCAPACITY() {
-        return CAPACITY;
+    public int getCapacity() {
+        return capacity;
     }
 
-    public void setCAPACITY(int CAPACITY) {
-        this.CAPACITY = CAPACITY;
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
     }
 
-    public int getDEPTH() {
-        return DEPTH;
+    public int getDepth() {
+        return depth;
     }
 
-    public void setDEPTH(int DEPTH) {
-        this.DEPTH = DEPTH;
+    public void setDepth(int depth) {
+        this.depth = depth;
     }
 
-    public double getHEIGHT() {
-        return HEIGHT;
+    public double getHeight() {
+        return height;
     }
 
-    public void setHEIGHT(double HEIGHT) {
-        this.HEIGHT = HEIGHT;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
-    public double getWIDTH() {
-        return WIDTH;
+    public double getWidth() {
+        return width;
     }
 
-    public void setWIDTH(double WIDTH) {
-        this.WIDTH = WIDTH;
+    public void setWidth(double width) {
+        this.width = width;
     }
 
     @Override
@@ -77,28 +77,28 @@ public class Oven extends Appliance{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Oven oven = (Oven) o;
-        return POWER_CONSUMPTION == oven.POWER_CONSUMPTION &&
-                WEIGHT == oven.WEIGHT &&
-                CAPACITY == oven.CAPACITY &&
-                DEPTH == oven.DEPTH &&
-                Double.compare(oven.HEIGHT, HEIGHT) == 0 &&
-                Double.compare(oven.WIDTH, WIDTH) == 0;
+        return powerConsumption == oven.powerConsumption &&
+                weight == oven.weight &&
+                capacity == oven.capacity &&
+                depth == oven.depth &&
+                Double.compare(oven.height, height) == 0 &&
+                Double.compare(oven.width, width) == 0;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(POWER_CONSUMPTION, WEIGHT, CAPACITY, DEPTH, HEIGHT, WIDTH);
+        return Objects.hash(powerConsumption, weight, capacity, depth, height, width);
     }
 
     @Override
     public String toString() {
         return "Oven{" +
-                "POWER_CONSUMPTION=" + POWER_CONSUMPTION +
-                ", WEIGHT=" + WEIGHT +
-                ", CAPACITY=" + CAPACITY +
-                ", DEPTH=" + DEPTH +
-                ", HEIGHT=" + HEIGHT +
-                ", WIDTH=" + WIDTH +
+                "powerConsumption=" + powerConsumption +
+                ", weight=" + weight +
+                ", capacity=" + capacity +
+                ", depth=" + depth +
+                ", height=" + height +
+                ", width=" + width +
                 '}';
     }
 

@@ -2,64 +2,64 @@ package by.tc.task01.entity;
 
 import java.util.Objects;
 
-public class Laptop extends Appliance{
-    private double BATTERY_CAPACITY;
-    private int MEMORY_ROM;
-    private int SYSTEM_MEMORY;
-    private double CPU;
-    private int DISPLAY_INCHS;
+public class Laptop implements Appliance{
+    private double batteryCapacity;
+    private int memoryRom;
+    private int systemMemory;
+    private double cpu;
+    private int displayInchs;
     private String OS;
 
     public Laptop() {
     }
 
-    public Laptop(double BATTERY_CAPACITY, int MEMORY_ROM, int SYSTEM_MEMORY, double CPU, int DISPLAY_INCHS, String OS) {
-        this.BATTERY_CAPACITY = BATTERY_CAPACITY;
-        this.MEMORY_ROM = MEMORY_ROM;
-        this.SYSTEM_MEMORY = SYSTEM_MEMORY;
-        this.CPU = CPU;
-        this.DISPLAY_INCHS = DISPLAY_INCHS;
+    public Laptop(double batteryCapacity, int memoryRom, int systemMemory, double cpu, int displayInchs, String OS) {
+        this.batteryCapacity = batteryCapacity;
+        this.memoryRom = memoryRom;
+        this.systemMemory = systemMemory;
+        this.cpu = cpu;
+        this.displayInchs = displayInchs;
         this.OS = OS;
     }
 
-    public double getBATTERY_CAPACITY() {
-        return BATTERY_CAPACITY;
+    public double getBatteryCapacity() {
+        return batteryCapacity;
     }
 
-    public void setBATTERY_CAPACITY(double BATTERY_CAPACITY) {
-        this.BATTERY_CAPACITY = BATTERY_CAPACITY;
+    public void setBatteryCapacity(double batteryCapacity) {
+        this.batteryCapacity = batteryCapacity;
     }
 
-    public int getMEMORY_ROM() {
-        return MEMORY_ROM;
+    public int getMemoryRom() {
+        return memoryRom;
     }
 
-    public void setMEMORY_ROM(int MEMORY_ROM) {
-        this.MEMORY_ROM = MEMORY_ROM;
+    public void setMemoryRom(int memoryRom) {
+        this.memoryRom = memoryRom;
     }
 
-    public int getSYSTEM_MEMORY() {
-        return SYSTEM_MEMORY;
+    public int getSystemMemory() {
+        return systemMemory;
     }
 
-    public void setSYSTEM_MEMORY(int SYSTEM_MEMORY) {
-        this.SYSTEM_MEMORY = SYSTEM_MEMORY;
+    public void setSystemMemory(int systemMemory) {
+        this.systemMemory = systemMemory;
     }
 
-    public double getCPU() {
-        return CPU;
+    public double getCpu() {
+        return cpu;
     }
 
-    public void setCPU(double CPU) {
-        this.CPU = CPU;
+    public void setCpu(double cpu) {
+        this.cpu = cpu;
     }
 
-    public int getDISPLAY_INCHS() {
-        return DISPLAY_INCHS;
+    public int getDisplayInchs() {
+        return displayInchs;
     }
 
-    public void setDISPLAY_INCHS(int DISPLAY_INCHS) {
-        this.DISPLAY_INCHS = DISPLAY_INCHS;
+    public void setDisplayInchs(int displayInchs) {
+        this.displayInchs = displayInchs;
     }
 
     public String getOS() {
@@ -75,27 +75,27 @@ public class Laptop extends Appliance{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Laptop laptop = (Laptop) o;
-        return Double.compare(laptop.BATTERY_CAPACITY, BATTERY_CAPACITY) == 0 &&
-                MEMORY_ROM == laptop.MEMORY_ROM &&
-                SYSTEM_MEMORY == laptop.SYSTEM_MEMORY &&
-                Double.compare(laptop.CPU, CPU) == 0 &&
-                DISPLAY_INCHS == laptop.DISPLAY_INCHS &&
+        return Double.compare(laptop.batteryCapacity, batteryCapacity) == 0 &&
+                memoryRom == laptop.memoryRom &&
+                systemMemory == laptop.systemMemory &&
+                Double.compare(laptop.cpu, cpu) == 0 &&
+                displayInchs == laptop.displayInchs &&
                 Objects.equals(OS, laptop.OS);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(BATTERY_CAPACITY, MEMORY_ROM, SYSTEM_MEMORY, CPU, DISPLAY_INCHS, OS);
+        return Objects.hash(batteryCapacity, memoryRom, systemMemory, cpu, displayInchs, OS);
     }
 
     @Override
     public String toString() {
         return "Laptop{" +
-                "BATTERY_CAPACITY=" + BATTERY_CAPACITY +
-                ", MEMORY_ROM=" + MEMORY_ROM +
-                ", SYSTEM_MEMORY=" + SYSTEM_MEMORY +
-                ", CPU=" + CPU +
-                ", DISPLAY_INCHS=" + DISPLAY_INCHS +
+                "batteryCapacity=" + batteryCapacity +
+                ", memoryRom=" + memoryRom +
+                ", systemMemory=" + systemMemory +
+                ", cpu=" + cpu +
+                ", displayInchs=" + displayInchs +
                 ", OS='" + OS + '\'' +
                 '}';
     }
