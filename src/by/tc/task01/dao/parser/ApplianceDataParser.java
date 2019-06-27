@@ -38,7 +38,7 @@ public class ApplianceDataParser {
         Set<String> keys = criteria.getCriteria().keySet();
 
         for (String key : keys) {
-            String search = (key + "=" + criteria.getCriteria().get(key)).toLowerCase();
+            String search = (key + "=" + criteria.getCriteria().get(key)).toLowerCase() + [,;];
             Pattern searchRequest = Pattern.compile(search);
             regExprs.add(searchRequest);
         }
